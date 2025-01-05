@@ -5,8 +5,8 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     // Expand mini app bottom-sheet on app open
-    window.Eitaa.WebApp.expand();
-  });
+    window.Eitaa?.WebApp?.expand();
+  }, []);
 
   return (
     <main className="h-svh bg-black text-white">
