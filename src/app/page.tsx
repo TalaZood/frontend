@@ -1,6 +1,4 @@
 export default function Home() {
-  console.log("isDev", typeof window !== "undefined" && window.Eitaa);
-
   return (
     <main className="h-svh bg-black text-white">
       <div className="h-full flex flex-col justify-center items-center">

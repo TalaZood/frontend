@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   if (isClientSide()) {
-    window.Eitaa.expand();
+    window.Eitaa.WebApp.expand();
   }
 
   return (

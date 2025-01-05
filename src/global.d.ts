@@ -1,5 +1,7 @@
 interface Window {
   Eitaa: {
-    expand: VoidFunction;
+    WebApp: {
+      expand: VoidFunction;
+    };
   };
 }
