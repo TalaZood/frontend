@@ -1,7 +1,5 @@
-import { isDev } from "@/utils/environment";
-
 export default function Home() {
-  console.log("isDev", isDev());
+  console.log("isDev", typeof window !== "undefined" && window.Eitaa);
 
   return (
     <main className="h-svh bg-black text-white">
