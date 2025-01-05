@@ -1,8 +1,7 @@
 "use client";
 
-import Container from "@/components/Container";
-import Image from "next/image";
 import { useEffect } from "react";
+import Container from "@/components/Container";
 
 export default function Home() {
   useEffect(() => {
