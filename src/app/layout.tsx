@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Script src="https://developer.eitaa.com/eitaa-web-app.js" />
+        <Script src="https://developer.eitaa.com/eitaa-web-app.js" async />
       </body>
     </html>
   );
