@@ -5,7 +5,9 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     // Expand mini app bottom-sheet on app open
-    window.Eitaa?.WebApp?.expand();
+    setTimeout(() => {
+      window.Eitaa.WebApp.expand();
+    }, 250);
   }, []);
 
   return (
