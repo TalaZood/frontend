@@ -1,6 +1,5 @@
 import Script from "next/script";
 import type { Metadata } from "next";
-import { isClientSide } from "@/utils/environment";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -24,10 +23,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  if (isClientSide()) {
-    window.Eitaa.WebApp.expand();
-  }
-
   return (
     <html dir="rtl" lang="fa-IR">
       <body
