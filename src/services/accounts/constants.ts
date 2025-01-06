@@ -1,0 +1,4 @@
+export enum ACCOUNTS_QUERY_KEYS {
+  LOGIN = "LOGIN",
+  OTP_REQUEST = "OTP_REQUEST",
+}
