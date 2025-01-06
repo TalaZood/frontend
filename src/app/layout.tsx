@@ -4,7 +4,9 @@ import Providers from "@/providers";
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 
-const vazirSans = Vazirmatn();
+const vazirSans = Vazirmatn({
+  subsets: ["arabic"],
+});
 
 export const metadata: Metadata = {
   title: "طلا زود",
