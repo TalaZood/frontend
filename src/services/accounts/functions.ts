@@ -19,22 +19,22 @@ export async function otpRequest(payload: {
 }
 
 export async function login(payload: { phone: string; otpCode: string }) {
-  const response = await http.post<LoginResponse>(
-    "/idp/auth/login",
-    {
-      Username: payload.phone,
-      Code: payload.otpCode,
-    },
-    {},
-    { throwError: true }
-  );
+  const response = await http.post<LoginResponse>("/idp/auth/login", {
+    body: JSON.stringify({
+      username: payload.phone,
+      code: payload.otpCode,
+    }),
+    throwError: true,
+  });
 
   return response.data;
 }
 
 export async function refresh(payload: { refreshToken: string }) {
   const response = await http.post<RefreshResponse>("/idp/auth/refresh", {
-    refreshToken: payload.refreshToken,
+    body: JSON.stringify({
+      refreshToken: payload.refreshToken,
+    }),
   });
 
   return response.data;
@@ -42,7 +42,9 @@ export async function refresh(payload: { refreshToken: string }) {
 
 export async function logout(payload: { refreshToken: string }) {
   const response = await http.post("/idp/auth/logout", {
-    refreshToken: payload.refreshToken,
+    body: JSON.stringify({
+      refreshToken: payload.refreshToken,
+    }),
   });
 
   return response.data;

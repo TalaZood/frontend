@@ -25,11 +25,11 @@ async function request<T>(url: string, options: RequestOptions = {}) {
 
     const result = await response.json();
 
-    return result as T;
+    return result as { data: T };
   } catch (error) {
     console.log("error", error);
 
-    return "NOT HANDLED ERROR";
+    return { data: <T>{}, error: "NOT HANDLED ERROR" };
   }
 }
 
@@ -40,7 +40,7 @@ export const http = {
   post: <T>(url: string, options?: RequestOptions) => {
     return request<T>(url, {
       method: "POST",
-      body: JSON.stringify(options.body),
+      body: options?.body || undefined,
       ...options,
     });
   },
