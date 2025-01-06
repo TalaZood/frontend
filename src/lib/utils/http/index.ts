@@ -14,7 +14,7 @@ async function request<T>(url: string, options: RequestOptions = {}) {
   const params = options.params
     ? `?${new URLSearchParams(options.params || "").toString()}`
     : "";
-  const fullUrl = process.env.NEXT_PUBLIC_API_BASE_URL + url + params;
+  const fullUrl = "https://apigw.tala.land" + url + params;
 
   try {
     const response = await fetch(fullUrl, options);
