@@ -1,5 +1,4 @@
 import "./globals.css";
-import Script from "next/script";
 import Providers from "@/providers";
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
@@ -22,7 +21,6 @@ export default function RootLayout({
     <html dir="rtl" lang="fa-IR">
       <body className={`${vazirSans.className} antialiased`}>
         <Providers>{children}</Providers>
-        <Script src="https://developer.eitaa.com/eitaa-web-app.js" async />
       </body>
     </html>
   );

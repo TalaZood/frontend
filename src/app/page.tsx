@@ -1,18 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect } from "react";
 import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  useEffect(() => {
-    // Expand mini app bottom-sheet on app open
-    setTimeout(() => {
-      window.Eitaa.WebApp.expand();
-    }, 250);
-  }, []);
-
   return (
     <Container className="px-4">
       <div className="h-full flex flex-col justify-center items-center">
