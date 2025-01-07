@@ -22,7 +22,7 @@ export function useMiniAppContext() {
   const context = useContext(AppContext);
 
   if (!context) {
-    throw new Error("App Context");
+    throw new Error("useMiniAppContext is used outside of its provider");
   }
 
   return context;
