@@ -1,6 +1,6 @@
 import "./globals.css";
 import Providers from "@/providers";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Vazirmatn } from "next/font/google";
 
 const vazirSans = Vazirmatn({
@@ -10,6 +10,12 @@ const vazirSans = Vazirmatn({
 export const metadata: Metadata = {
   title: "طلا زود",
   description: "",
+};
+
+export const viewport: Viewport = {
+  minimumScale: 1,
+  initialScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
