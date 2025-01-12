@@ -11,7 +11,6 @@ export default function OnboardingLogic({ children }: PropsWithChildren) {
 
     if (isFirstRun) {
       router.replace("/onboarding");
-      localStorage.setItem("isFirstRun", "true");
     }
   }, [router]);
 

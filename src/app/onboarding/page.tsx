@@ -18,6 +18,7 @@ export default function Onboarding() {
     const isDone = step === steps.length - 1;
 
     if (isDone) {
+      localStorage.setItem("isFirstRun", "false");
       return router.replace("/");
     }
 
