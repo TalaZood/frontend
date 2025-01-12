@@ -17,7 +17,7 @@ export default function Container({
   return (
     <Wrapper
       className={cn(
-        "max-w-screen-sm h-svh lg:border-x lg:border-gray-100 max-lg:px-4 pb-safe-4 mx-auto",
+        "max-w-screen-xs h-svh lg:border-x lg:border-gray-100 max-lg:px-4 pb-safe-4 mx-auto",
         className
       )}
     >
