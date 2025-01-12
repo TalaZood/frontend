@@ -9,7 +9,7 @@ const vazirSans = Vazirmatn({
 });
 
 export const metadata: Metadata = {
-  title: "طلا زود",
+  title: "طلاره",
   description: "",
 };
 
