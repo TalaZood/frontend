@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindSafeAreas from "tailwind-safe-areas";
 
 export default {
   darkMode: ["class"],
@@ -9,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -58,5 +62,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwind-safe-areas")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
