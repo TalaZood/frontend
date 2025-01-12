@@ -1,3 +1,4 @@
+import OnboardingLogic from "@/components/OnboardingLogic";
 import "./globals.css";
 import Providers from "@/providers";
 import type { Metadata, Viewport } from "next";
@@ -26,7 +27,9 @@ export default function RootLayout({
   return (
     <html dir="rtl" lang="fa-IR">
       <body className={`${vazirSans.className} antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <OnboardingLogic>{children}</OnboardingLogic>
+        </Providers>
       </body>
     </html>
   );
